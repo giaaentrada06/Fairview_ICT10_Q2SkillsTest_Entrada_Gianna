@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Club Information</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #9155aa77;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid rgba(128, 0, 0, 0.233);
+        }
+
+        button {
+            background-color: rgba(128, 0, 0, 0.326);
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #info {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>School Club Information</h2>
+
+    <label>Select a club:</label><br><br>
+    <select id="club">
+        <option>Marching Band</option>
+        <option>Glee Club</option>
+        <option>Dance Club</option>
+        <option>Math Club</option>
+        <option>Science Club</option>
+        <option>Communications Arts Club</option>
+        <option>COCC</option>
+        <option>Social Science Club</option>
+        <option>Volleyball Varsity</option>
+        <option>Basketball Varsity</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="showInfo()">Show Club Information</button>
+
+    <div id="info"></div>
+</div>
+
+<script>
+function showInfo() {
+    var club = document.getElementById("club").value;
+    var text = "";
+
+    if (club === "Marching Band") {
+        text = "Moderator: Mr. Emilio Alumno<br>Meeting Time: Tuesday & Wednesday 03:00–4:30 PM<br>Venue: Band Room";
+    } else if (club === "Glee Club") {
+        text = "Moderator: Mr. Denver Martin<br>Meeting Time: Monday 03:00–05:00 PM<br>Venue: High School Music Room";
+    } else if (club === "Dance Club") {
+        text = "Moderator: Mr. Alfred Cases<br>Meeting Time: Tuesday 03:00–05:00 PM<br>Venue: Teatro Preciosa";
+    } else if (club === "Math Club") {
+        text = "Moderator: Mr. Nicole Gabuya<br>Meeting Time: Monday 02:30–03:00 PM<br>Venue: Room 404";
+    } else if (club === "Science Club") {
+        text = "Moderator: Ms. Jameelyn Maramag<br>Meeting Time: Tuesday 03:00–04:00 PM<br>Venue: Room 404";
+    } else if (club === "Communications Arts Club") {
+        text = "Moderator: Ms. Yannis Fernandez<br>Meeting Time: Wednesday & Friday 03:00–04:00 PM<br>Venue: Room 406";
+    } else if (club === "COCC") {
+        text = "Moderator: SSgt. Jemima David PA (Res)<br>Meeting Time: Wednesday 02:30–04:30 PM<br>Venue: Quadrangle / Teatro Preciosa";
+    } else if (club === "Social Science Club") {
+        text = "Moderator: Mr. Roberto Lim<br>Meeting Time: Tuesday 03:00–04:00 PM<br>Venue: Room 409";
+    } else if (club === "Volleyball Varsity") {
+        text = "Moderator: Mr. Adrian Ruiz<br>Meeting Time: Wednesday 03:00–04:00 PM<br>Venue: Quadrangle";
+    } else {
+        text = "Moderator: Mr. Adrian Ruiz<br>Meeting Time: Monday 03:00–04:00 PM<br>Venue: Quadrangle";
+    }
+
+    document.getElementById("info").innerHTML = "<b>" + club + "</b><br>" + text;
+}
+</script>
+
+</body>
+</html>
+
+
+
